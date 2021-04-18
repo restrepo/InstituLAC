@@ -1,3 +1,6 @@
+# Creates Excel File template 
+### with full several formatted worksheets and pandas DataFrames
+
 USAGE:
 ```bash
 python3 template.py
