@@ -94,7 +94,7 @@ worksheet2.merge_range('J1:M1', 'Validación del Centro, Instituto o Corporació
 #                                       See also → https://xlsxwriter.readthedocs.io/working_with_pandas.html
 writer.sheets["4.ART y N"]=worksheet2
 table.to_excel(writer,sheet_name="4.ART y N",startrow=1,startcol=2,index=False)
-worksheet2.set_row_pixels(1, 60)
+worksheet2.set_row_pixels(1, 120)
 #Overwrite the header row of the table with the proper format
 #...See → https://link.medium.com/fniEH6hMxfb
 for col , value in enumerate(table.columns.values):
@@ -113,6 +113,5 @@ worksheet2.set_column('M:M',20)
 #Creates a set of cells with a drop-down menu Sí/No. See → https://xlsxwriter.readthedocs.io/working_with_data_validation.html
 worksheet2.data_validation('M3:M{}'.format(table.shape[0]+2), {'validate': 'list',
                                   'source': ['Sí', 'No']})
-
 
 workbook.close()
